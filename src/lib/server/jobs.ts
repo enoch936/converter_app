@@ -1,7 +1,7 @@
 import { Queue } from "bullmq";
 import { Pool } from "pg";
 import { getServerConfig } from "./config";
-import type { CreateJobRequest, JobRepository, ProcessingQueue, RemoteJob } from "./contracts";
+import type { JobRepository, ProcessingQueue, RemoteJob } from "./contracts";
 
 let pool: Pool | undefined;
 let queue: Queue | undefined;

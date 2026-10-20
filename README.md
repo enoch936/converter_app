@@ -15,17 +15,10 @@ Open <http://localhost:3000>.
 
 The current workspace implements real browser-side processing for:
 
-- Image conversion, compression, resizing, and image-to-PDF output.
-- PDF merge, page split, rotation, stream optimization, and text annotation.
-- OCR image-to-text with a lazily loaded English Tesseract worker.
-- DOCX raw-text extraction.
-- CSV to XLSX and XLSX to CSV conversion.
-- JSON validation/formatting and XML indentation.
-- Multi-file selection for image-to-PDF and PDF merge.
-- Downloadable output files and browser-only recent-job history.
-- PWA manifest, shell service worker, sitemap, robots metadata, and CI.
 
 Uploaded files are processed in the browser and are not sent to an application server by these workflows. The service worker caches only application resources, never uploaded files.
+
+Every workflow currently exposed in the browser workspace is local and produces a real downloadable result. Remote job and upload endpoints are infrastructure APIs, not user-facing success paths, and remain fail-closed until authentication and provider adapters are configured.
 
 ## Validation
 
